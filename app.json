@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "VegTrack",
+    "slug": "vegtrack",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#15803d"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "br.com.motiva.vegtrack",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "O VegTrack utiliza sua localização para georreferenciar os levantamentos de vegetação e garantir rastreabilidade regulatória perante a ARTESP.",
+        "NSCameraUsageDescription": "O VegTrack utiliza a câmera para registrar evidências fotográficas das condições da vegetação, obrigatórias para comprovação de conformidade."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#15803d"
+      },
+      "package": "br.com.motiva.vegtrack",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "targetSdkVersion": 34
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "O VegTrack utiliza sua localização para georreferenciar os levantamentos de vegetação."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "O VegTrack utiliza a câmera para registrar evidências fotográficas das condições da vegetação."
+        }
+      ]
+    ]
+  }
+}
